@@ -2,24 +2,24 @@
 <rss version="2.0">
     <channel>
         <title>pnpm Blog</title>
-        <link>https://pnpm.io/ja/blog</link>
+        <link>https://cuyl.github.io/pnpm.github.io/ja/blog</link>
         <description>pnpm Blog</description>
         <lastBuildDate>Sat, 17 Oct 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[pnpm でのノードモジュールに関するオプション設定]]></title>
-            <link>https://pnpm.io/ja/blog/2020/10/17/node-modules-configuration-options-with-pnpm</link>
-            <guid>pnpm でのノードモジュールに関するオプション設定</guid>
+            <title><![CDATA[Node-Modules configuration options with pnpm]]></title>
+            <link>https://cuyl.github.io/pnpm.github.io/ja/blog/2020/10/17/node-modules-configuration-options-with-pnpm</link>
+            <guid>Node-Modules configuration options with pnpm</guid>
             <pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[nodemodules ディレクトリを生成する方法は多くあります。 ゆるい nodemodules を作成する方法もありますが、ここでの目標は最も厳格なものを生成することです。]]></description>
+            <description><![CDATA[There are many ways to create a node_modules directory.]]></description>
         </item>
         <item>
-            <title><![CDATA[フラットな node_modules が唯一の方法ではありません]]></title>
-            <link>https://pnpm.io/ja/blog/2020/05/27/flat-node-modules-is-not-the-only-way</link>
-            <guid>フラットな node_modules が唯一の方法ではありません</guid>
+            <title><![CDATA[Flat node_modules is not the only way]]></title>
+            <link>https://cuyl.github.io/pnpm.github.io/ja/blog/2020/05/27/flat-node-modules-is-not-the-only-way</link>
+            <guid>Flat node_modules is not the only way</guid>
             <pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[pnpm の新規ユーザーから、pnpm が生成する node_modules の奇妙な構造についてよく聞かれます。 なぜ平坦な構造を使用しないのでしょうか。 依存のさらにその依存はどこにあるのでしょうか。]]></description>
+            <description><![CDATA[New users of pnpm frequently ask me about the weird structure of node_modules that pnpm creates. Why is it not flat? Where are all the sub-dependencies?]]></description>
         </item>
     </channel>
 </rss>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://pnpm.io/it/blog</id>
+    <id>https://cuyl.github.io/pnpm.github.io/it/blog</id>
     <title>pnpm Blog</title>
     <updated>2020-10-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://pnpm.io/it/blog"/>
+    <link rel="alternate" href="https://cuyl.github.io/pnpm.github.io/it/blog"/>
     <subtitle>pnpm Blog</subtitle>
-    <icon>https://pnpm.io/it/img/favicon.png</icon>
+    <icon>https://cuyl.github.io/pnpm.github.io/it/img/favicon.png</icon>
     <entry>
-        <title type="html"><![CDATA[Opzioni di configurazione di Node-Modules con pnpm]]></title>
-        <id>Opzioni di configurazione di Node-Modules con pnpm</id>
-        <link href="https://pnpm.io/it/blog/2020/10/17/node-modules-configuration-options-with-pnpm"/>
+        <title type="html"><![CDATA[Node-Modules configuration options with pnpm]]></title>
+        <id>Node-Modules configuration options with pnpm</id>
+        <link href="https://cuyl.github.io/pnpm.github.io/it/blog/2020/10/17/node-modules-configuration-options-with-pnpm"/>
         <updated>2020-10-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Esistono molti modi per creare una cartella nodemodules. Il tuo obiettivo deve essere quello di creare la più rigorosa, ma se ciò non è possibile, ci sono anche opzioni per creare una cartella nodemodules sciolta.]]></summary>
+        <summary type="html"><![CDATA[There are many ways to create a node_modules directory.]]></summary>
         <author>
             <name>Zoltan Kochan</name>
             <uri>http://twitter.com/zoltankochan</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[La node_modules flat non è l'unico modo]]></title>
-        <id>La node_modules flat non è l'unico modo</id>
-        <link href="https://pnpm.io/it/blog/2020/05/27/flat-node-modules-is-not-the-only-way"/>
+        <title type="html"><![CDATA[Flat node_modules is not the only way]]></title>
+        <id>Flat node_modules is not the only way</id>
+        <link href="https://cuyl.github.io/pnpm.github.io/it/blog/2020/05/27/flat-node-modules-is-not-the-only-way"/>
         <updated>2020-05-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[I nuovi utenti di pnpm mi chiedono spesso della strana struttura di node_modules che crea pnpm. Perché non è piatta? Dove sono tutte le dipendenze secondarie?]]></summary>
+        <summary type="html"><![CDATA[New users of pnpm frequently ask me about the weird structure of node_modules that pnpm creates. Why is it not flat? Where are all the sub-dependencies?]]></summary>
         <author>
             <name>Zoltan Kochan</name>
             <uri>http://twitter.com/zoltankochan</uri>

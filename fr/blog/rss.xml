@@ -2,24 +2,24 @@
 <rss version="2.0">
     <channel>
         <title>pnpm Blog</title>
-        <link>https://pnpm.io/fr/blog</link>
+        <link>https://cuyl.github.io/pnpm.github.io/fr/blog</link>
         <description>pnpm Blog</description>
         <lastBuildDate>Sat, 17 Oct 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Options de configuration des node_modules avec pnpm]]></title>
-            <link>https://pnpm.io/fr/blog/2020/10/17/node-modules-configuration-options-with-pnpm</link>
-            <guid>Options de configuration des node_modules avec pnpm</guid>
+            <title><![CDATA[Node-Modules configuration options with pnpm]]></title>
+            <link>https://cuyl.github.io/pnpm.github.io/fr/blog/2020/10/17/node-modules-configuration-options-with-pnpm</link>
+            <guid>Node-Modules configuration options with pnpm</guid>
             <pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Il existe de nombreuses façons de créer un dossier nodemodules. Votre objectif doit être de créer le plus strict, mais si ce n'est pas possible, il y a aussi des options pour faire un nodemodules en vrac.]]></description>
+            <description><![CDATA[There are many ways to create a node_modules directory.]]></description>
         </item>
         <item>
-            <title><![CDATA[Flat node_modules n'est pas le seul moyen]]></title>
-            <link>https://pnpm.io/fr/blog/2020/05/27/flat-node-modules-is-not-the-only-way</link>
-            <guid>Flat node_modules n'est pas le seul moyen</guid>
+            <title><![CDATA[Flat node_modules is not the only way]]></title>
+            <link>https://cuyl.github.io/pnpm.github.io/fr/blog/2020/05/27/flat-node-modules-is-not-the-only-way</link>
+            <guid>Flat node_modules is not the only way</guid>
             <pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Les nouveaux utilisateurs de pnpm me posent souvent des questions sur la structure bizarre du dossier node_modules que pnpm créé. Pourquoi n'est-il pas plat ? Où sont toutes les sous-dépendances ?]]></description>
+            <description><![CDATA[New users of pnpm frequently ask me about the weird structure of node_modules that pnpm creates. Why is it not flat? Where are all the sub-dependencies?]]></description>
         </item>
     </channel>
 </rss>

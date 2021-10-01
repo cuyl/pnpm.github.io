@@ -2,24 +2,24 @@
 <rss version="2.0">
     <channel>
         <title>pnpm Blog</title>
-        <link>https://pnpm.io/zh/blog</link>
+        <link>https://cuyl.github.io/pnpm.github.io/zh/blog</link>
         <description>pnpm Blog</description>
         <lastBuildDate>Sat, 17 Oct 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[pnpm的node_modules配置选项]]></title>
-            <link>https://pnpm.io/zh/blog/2020/10/17/node-modules-configuration-options-with-pnpm</link>
-            <guid>pnpm的node_modules配置选项</guid>
+            <title><![CDATA[Node-Modules configuration options with pnpm]]></title>
+            <link>https://cuyl.github.io/pnpm.github.io/zh/blog/2020/10/17/node-modules-configuration-options-with-pnpm</link>
+            <guid>Node-Modules configuration options with pnpm</guid>
             <pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[有多种方式创建nodemodules目录。 但你一定想要以最严格的方式创建，当然如果你的当前项目无法使用严格的nodemodules结构，你可以配置为不严格的。]]></description>
+            <description><![CDATA[There are many ways to create a node_modules directory.]]></description>
         </item>
         <item>
-            <title><![CDATA[扁平的 node_modules 不是唯一的方法]]></title>
-            <link>https://pnpm.io/zh/blog/2020/05/27/flat-node-modules-is-not-the-only-way</link>
-            <guid>扁平的 node_modules 不是唯一的方法</guid>
+            <title><![CDATA[Flat node_modules is not the only way]]></title>
+            <link>https://cuyl.github.io/pnpm.github.io/zh/blog/2020/05/27/flat-node-modules-is-not-the-only-way</link>
+            <guid>Flat node_modules is not the only way</guid>
             <pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[Pnpm 的新用户们经常会问我关于 pnpm 创建的奇怪的 node_modules 结构。 为什么不是平铺的？ 次级依赖去哪了？]]></description>
+            <description><![CDATA[New users of pnpm frequently ask me about the weird structure of node_modules that pnpm creates. Why is it not flat? Where are all the sub-dependencies?]]></description>
         </item>
     </channel>
 </rss>

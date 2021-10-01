@@ -4,8 +4,8 @@
   <ShortName>pnpm</ShortName>
   <Description>Search pnpm</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://pnpm.io/tr/img/favicon.png</Image>
-  <Url type="text/html" method="get" template="https://pnpm.io/tr/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://pnpm.io/tr/opensearch.xml" />
-  <moz:SearchForm>https://pnpm.io/tr/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://cuyl.github.io/pnpm.github.io/tr/img/favicon.png</Image>
+  <Url type="text/html" method="get" template="https://cuyl.github.io/pnpm.github.io/tr/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://cuyl.github.io/pnpm.github.io/tr/opensearch.xml" />
+  <moz:SearchForm>https://cuyl.github.io/pnpm.github.io/tr/</moz:SearchForm>
 </OpenSearchDescription>

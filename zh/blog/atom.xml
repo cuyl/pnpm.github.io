@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://pnpm.io/zh/blog</id>
+    <id>https://cuyl.github.io/pnpm.github.io/zh/blog</id>
     <title>pnpm Blog</title>
     <updated>2020-10-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://pnpm.io/zh/blog"/>
+    <link rel="alternate" href="https://cuyl.github.io/pnpm.github.io/zh/blog"/>
     <subtitle>pnpm Blog</subtitle>
-    <icon>https://pnpm.io/zh/img/favicon.png</icon>
+    <icon>https://cuyl.github.io/pnpm.github.io/zh/img/favicon.png</icon>
     <entry>
-        <title type="html"><![CDATA[pnpm的node_modules配置选项]]></title>
-        <id>pnpm的node_modules配置选项</id>
-        <link href="https://pnpm.io/zh/blog/2020/10/17/node-modules-configuration-options-with-pnpm"/>
+        <title type="html"><![CDATA[Node-Modules configuration options with pnpm]]></title>
+        <id>Node-Modules configuration options with pnpm</id>
+        <link href="https://cuyl.github.io/pnpm.github.io/zh/blog/2020/10/17/node-modules-configuration-options-with-pnpm"/>
         <updated>2020-10-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[有多种方式创建nodemodules目录。 但你一定想要以最严格的方式创建，当然如果你的当前项目无法使用严格的nodemodules结构，你可以配置为不严格的。]]></summary>
+        <summary type="html"><![CDATA[There are many ways to create a node_modules directory.]]></summary>
         <author>
             <name>Zoltan Kochan</name>
             <uri>http://twitter.com/zoltankochan</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[扁平的 node_modules 不是唯一的方法]]></title>
-        <id>扁平的 node_modules 不是唯一的方法</id>
-        <link href="https://pnpm.io/zh/blog/2020/05/27/flat-node-modules-is-not-the-only-way"/>
+        <title type="html"><![CDATA[Flat node_modules is not the only way]]></title>
+        <id>Flat node_modules is not the only way</id>
+        <link href="https://cuyl.github.io/pnpm.github.io/zh/blog/2020/05/27/flat-node-modules-is-not-the-only-way"/>
         <updated>2020-05-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Pnpm 的新用户们经常会问我关于 pnpm 创建的奇怪的 node_modules 结构。 为什么不是平铺的？ 次级依赖去哪了？]]></summary>
+        <summary type="html"><![CDATA[New users of pnpm frequently ask me about the weird structure of node_modules that pnpm creates. Why is it not flat? Where are all the sub-dependencies?]]></summary>
         <author>
             <name>Zoltan Kochan</name>
             <uri>http://twitter.com/zoltankochan</uri>
