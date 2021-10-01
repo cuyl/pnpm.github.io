@@ -22,9 +22,9 @@ function makeEditUrl (locale, path1, path2) {
 module.exports={
   "title": "pnpm",
   "tagline": "Fast, disk space efficient package manager",
-  "url": "https://pnpm.io",
-  "baseUrl": "/",
-  "organizationName": "pnpm",
+  "url": "https://cuyl.github.io",
+  "baseUrl": "/pnpm.github.io/",
+  "organizationName": "cuyl",
   "projectName": "pnpm.github.io",
   "scripts": [
     "https://buttons.github.io/buttons.js"
