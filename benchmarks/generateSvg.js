@@ -18,7 +18,7 @@ const PNPM_COLOR = '#fbae00'
 export default (resultArrays, pms, tests, formattedNow) => {
   let svgStr = ''
   // colors taken from logos (where possible)
-  const colors = [ NPM_COLOR, PNPM_COLOR, YARN_COLOR, YARN_COLOR ]
+  const colors = [ NPM_COLOR, PNPM_COLOR, YARN_COLOR, YARN_COLOR, YARN_COLOR ]
   // empty areas next to the graph
   const offset = {
     left: 40,
@@ -93,7 +93,7 @@ export default (resultArrays, pms, tests, formattedNow) => {
 
     // add name under circle
     const anchor = 'middle'
-    let textY = y + radius + 4
+    let textY = y + radius
     svgStr += `  <text x="${x}" y="${textY}" class="font s4" text-anchor="${anchor}">${pm.legend}</text>` + '\n'
 
     // add version under name

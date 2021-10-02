@@ -88,8 +88,13 @@ const testDescriptions = [
     // 'update'
   // ]
 ]
+const toFixed = (time) => Math.round(time / 100) / 10
 
-const toArray = (pms, resultsObj) => {
+const formatMs = ms => ms === 0 ? 'n/a' : prettyMs(ms)
+
+const formatRow = matrix => matrix.map(r => r.join(' | '))
+
+const toArray = (pms, resultsObj, trans) => {
   /**
    * Make array of all similar installs grouped together:
    * [
@@ -101,7 +106,7 @@ const toArray = (pms, resultsObj) => {
   return tests
     .map((test) => pms
       .map((pm) => resultsObj[pm][test])
-      .map((time) => Math.round(time / 100) / 10) // round to `x.x` seconds
+      .map(trans)
     )
 }
 
@@ -138,7 +143,7 @@ async function run () {
   spawn.sync('pnpm', ['add', 'yarn@latest', 'npm@latest', 'pnpm@latest'], { cwd: managersDir, stdio: 'inherit' })
   await installYarnBerryLikeModule(managersDir)
   const formattedNow = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date())
-  const pms = [ 'npm', 'pnpm', 'yarn', 'yarn_pnp' ]
+  const pms = [ 'npm', 'pnpm', 'yarn_pnp', 'yarn', 'yarn_pnpm' ]
   const sections = []
   const svgs = []
   const opts = {
@@ -153,34 +158,40 @@ async function run () {
       ...opts,
       hasNodeModules: false,
     }))
+    const yarnPnpmRes = min(await benchmark(cmdsMap.yarn_pnpm, fixture.name, opts))
     const pnpmRes = min(await benchmark(cmdsMap.pnpm, fixture.name, opts))
-    const resArray = toArray(pms, {
+    const pmsToResMap =  {
       'npm': npmRes,
       'pnpm': pnpmRes,
       'yarn': yarnRes,
       'yarn_pnp': yarnPnPRes,
-    })
+      'yarn_pnpm': yarnPnpmRes,
+    }
+
+    const title = pms.map(key => cmdsMap[key].legend).join(' | ')
+    const resTemplateArray = formatRow(toArray(pms, pmsToResMap, formatMs))
 
     sections.push(stripIndents`
       ${fixture.mdDesc}
 
-      | action  | cache | lockfile | node_modules| npm | pnpm | Yarn | Yarn PnP |
-      | ---     | ---   | ---      | ---         | --- | ---  | ---  | ---      |
-      | install |       |          |             | ${prettyMs(npmRes.firstInstall)} | ${prettyMs(pnpmRes.firstInstall)} | ${prettyMs(yarnRes.firstInstall)} | ${prettyMs(yarnPnPRes.firstInstall)} |
-      | install | ✔     | ✔        | ✔           | ${prettyMs(npmRes.repeatInstall)} | ${prettyMs(pnpmRes.repeatInstall)} | ${prettyMs(yarnRes.repeatInstall)} | n/a |
-      | install | ✔     | ✔        |             | ${prettyMs(npmRes.withWarmCacheAndLockfile)} | ${prettyMs(pnpmRes.withWarmCacheAndLockfile)} | ${prettyMs(yarnRes.withWarmCacheAndLockfile)} | ${prettyMs(yarnPnPRes.withWarmCacheAndLockfile)} |
-      | install | ✔     |          |             | ${prettyMs(npmRes.withWarmCache)} | ${prettyMs(pnpmRes.withWarmCache)} | ${prettyMs(yarnRes.withWarmCache)} | ${prettyMs(yarnPnPRes.withWarmCache)} |
-      | install |       | ✔        |             | ${prettyMs(npmRes.withLockfile)} | ${prettyMs(pnpmRes.withLockfile)} | ${prettyMs(yarnRes.withLockfile)} | ${prettyMs(yarnPnPRes.withLockfile)} |
-      | install | ✔     |          | ✔           | ${prettyMs(npmRes.withWarmCacheAndModules)} | ${prettyMs(pnpmRes.withWarmCacheAndModules)} | ${prettyMs(yarnRes.withWarmCacheAndModules)} | n/a |
-      | install |       | ✔        | ✔           | ${prettyMs(npmRes.withWarmModulesAndLockfile)} | ${prettyMs(pnpmRes.withWarmModulesAndLockfile)} | ${prettyMs(yarnRes.withWarmModulesAndLockfile)} | n/a |
-      | install |       |          | ✔           | ${prettyMs(npmRes.withWarmModules)} | ${prettyMs(pnpmRes.withWarmModules)} | ${prettyMs(yarnRes.withWarmModules)} | n/a |
+      | action  | cache | lockfile | node_modules| ${title} |
+      | ---     | ---   | ---      | ---         | --- | ---  | ---  | ---      | ---       |
+      | install |       |          |             | ${resTemplateArray[0]} |
+      | install | ✔     | ✔        | ✔           | ${resTemplateArray[1]} |
+      | install | ✔     | ✔        |             | ${resTemplateArray[2]} |
+      | install | ✔     |          |             | ${resTemplateArray[3]} |
+      | install |       | ✔        |             | ${resTemplateArray[4]} |
+      | install | ✔     |          | ✔           | ${resTemplateArray[5]} |
+      | install |       | ✔        | ✔           | ${resTemplateArray[6]} |
+      | install |       |          | ✔           | ${resTemplateArray[7]} |
+      | update  | n/a   | n/a      | n/a         | ${resTemplateArray[8]} |
 
       ![Graph of the ${fixture.name} results](../../static/img/benchmarks/${fixture.name}.svg)
     `)
 
     svgs.push({
       path: path.join(BENCH_IMGS, `${fixture.name}.svg`),
-      file: generateSvg(resArray, [cmdsMap.npm, cmdsMap.pnpm, cmdsMap.yarn, cmdsMap.yarn_pnp], testDescriptions, formattedNow)
+      file: generateSvg(toArray(pms, pmsToResMap, toFixed), [cmdsMap.npm, cmdsMap.pnpm, cmdsMap.yarn_pnp, cmdsMap.yarn, cmdsMap.yarn_pnpm], testDescriptions, formattedNow)
     })
   }
 

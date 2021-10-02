@@ -30,7 +30,7 @@ export default {
   },
   yarn: {
     scenario: 'yarn',
-    legend: 'Yarn',
+    legend: 'Yarn nm',
     name: 'yarn',
     args: [
       'install'
@@ -39,6 +39,14 @@ export default {
   yarn_pnp: {
     scenario: 'yarn_pnp',
     legend: 'Yarn PnP',
+    name: 'yarn',
+    args: [
+      'install'
+    ]
+  },
+  yarn_pnpm: {
+    scenario: 'yarn_pnpm',
+    legend: 'Yarn pnpm',
     name: 'yarn',
     args: [
       'install'
