@@ -106,9 +106,6 @@ export default async function benchmark (pm, fixture, opts) {
         nodeLinker
       ]
     }, { env, cwd, stdio: "inherit" })
-  }
-
-  if (pm.name.startsWith('yarn')) {
     spawnSyncOrThrow({
       name: 'yarn',
       args: [
@@ -127,7 +124,6 @@ export default async function benchmark (pm, fixture, opts) {
         'false',
       ]
     }, { env, cwd, stdio: "inherit" })
-    
   }
 
   const firstInstall = measureInstall(pm, cwd, env)
