@@ -106,7 +106,7 @@ const toArray = (pms, resultsObj) => {
 }
 
 async function installYarnBerryLikeModule (managersDir) {
-  spawn.sync('pnpm', ['exec', 'yarn', 'set', 'version', 'berry'], { cwd: managersDir, stdio: 'inherit' })
+  spawn.sync('pnpm', ['exec', 'yarn', 'set', 'version', '3.1.0-rc.8'], { cwd: managersDir, stdio: 'inherit' })
   const result = spawn.sync('pnpm', ['exec', 'yarn', '--version'], { cwd: managersDir })
   const yarnBerryVersion = result.stdout.toString().trim()
 
